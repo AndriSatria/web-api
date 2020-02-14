@@ -13,6 +13,10 @@ namespace WebApi.Helpers
             CreateMap<EditUserDto, User>();
             CreateMap<CreateUserDto, User>()
                 .ForMember(dest => dest.Password, opt => opt.Ignore());
+            CreateMap<PurchaseTransaction, PurchaseTransactionDto>();
+            CreateMap<PurchaseTransactionDto, PurchaseTransaction>();
+            CreateMap<PurchaseTransactionDetail, PurchaseTransactionDetailDto>();
+            CreateMap<PurchaseTransactionDetailDto, PurchaseTransactionDetail>();
         }
     }
 }
