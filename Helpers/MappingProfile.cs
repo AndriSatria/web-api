@@ -17,6 +17,7 @@ namespace WebApi.Helpers
             CreateMap<PurchaseTransactionDto, PurchaseTransaction>();
             CreateMap<PurchaseTransactionDetail, PurchaseTransactionDetailDto>();
             CreateMap<PurchaseTransactionDetailDto, PurchaseTransactionDetail>();
+            CreateMap<Voucher, VoucherDto>();
         }
     }
 }

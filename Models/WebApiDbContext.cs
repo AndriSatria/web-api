@@ -8,6 +8,8 @@ namespace WebApi.Models
         public virtual DbSet<PurchaseTransaction> PurchaseTransactions { get; set; }
         public virtual DbSet<PurchaseTransactionDetail> PurchaseTransactionDetails { get; set; }
 
+        public virtual DbSet<Voucher> Vouchers { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<PurchaseTransaction>()

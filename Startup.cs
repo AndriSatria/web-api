@@ -30,7 +30,8 @@ namespace WebApi
 
 
             services.AddCors();
-            services.AddControllers();
+            services.AddControllers()
+                .AddJsonOptions(options =>{ options.JsonSerializerOptions.IgnoreNullValues = true; });
 
             // configure strongly typed settings objects
             var appSettingsSection = Configuration.GetSection("AppSettings");

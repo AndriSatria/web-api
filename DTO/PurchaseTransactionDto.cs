@@ -1,7 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using WebApi.DTO;
 
 namespace WebApi.Models
 {
@@ -11,5 +12,6 @@ namespace WebApi.Models
         [Required] public decimal Amount { get; set; }
         [Required] public DateTime TransactDateTime { get; set; }
         [Required] public ICollection<PurchaseTransactionDetailDto> PurchaseTransactionDetails { get; set; }
+        public VoucherDto Voucher { get; set; }
     }
 }
